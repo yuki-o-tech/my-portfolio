@@ -1,6 +1,6 @@
 import Head from "next/head"
+import NavBar from "@/components/NavBar"
 import GlobalStyle from "../styles/globalCss"
-import NavBar from "../src/components/NavBar"
 
 const Page = () => {
   return (
@@ -12,7 +12,6 @@ const Page = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
-      <main>Welcome to my portfolio</main>
       <NavBar />
     </>
   )

@@ -1,6 +1,6 @@
-import React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import React from "react"
+import Document, { Html, Head, Main, NextScript } from "next/document"
+import { ServerStyleSheet } from "styled-components"
 
 class MyDocument extends Document {
   render() {
@@ -15,7 +15,7 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>
@@ -24,30 +24,30 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-MyDocument.getInitialProps = async (ctx) => {
-  const styledComponentSheet = new ServerStyleSheet();
-  const originalRenderPage = ctx.renderPage;
+MyDocument.getInitialProps = async ctx => {
+  const styledComponentSheet = new ServerStyleSheet()
+  const originalRenderPage = ctx.renderPage
 
   try {
     ctx.renderPage = () =>
       originalRenderPage({
-        enhanceApp: (App) => (props) =>
+        enhanceApp: App => props =>
           styledComponentSheet.collectStyles(<App {...props} />),
-      });
+      })
 
-    const initialProps = await Document.getInitialProps(ctx);
+    const initialProps = await Document.getInitialProps(ctx)
 
     return {
       ...initialProps,
       styles: [initialProps.styles, styledComponentSheet.getStyleElement()],
-    };
+    }
   } finally {
-    styledComponentSheet.seal();
+    styledComponentSheet.seal()
   }
-};
+}
 
-export default MyDocument;
+export default MyDocument
