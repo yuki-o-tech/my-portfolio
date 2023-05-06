@@ -1,4 +1,5 @@
 import Head from "next/head"
+import NavBar from "@/components/NavBar"
 import GlobalStyle from "../styles/globalCss"
 
 const Page = () => {
@@ -11,7 +12,7 @@ const Page = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
-      <main>Welcome to my portfolio</main>
+      <NavBar />
     </>
   )
 }
