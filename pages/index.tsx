@@ -1,5 +1,6 @@
 import Head from "next/head"
 import GlobalStyle from "../styles/globalCss"
+import NavBar from "../src/components/NavBar"
 
 const Page = () => {
   return (
@@ -12,6 +13,7 @@ const Page = () => {
       </Head>
       <GlobalStyle />
       <main>Welcome to my portfolio</main>
+      <NavBar />
     </>
   )
 }
