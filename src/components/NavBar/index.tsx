@@ -22,7 +22,8 @@ const ItemBox = () => {
     </Box>
   )
 }
-// TODO: font-family and size, if it needs a logo?(or my name on the navBar left)
+// TODO: font-family and size, if it needs a logo?
+//(or my name on the navBar left)
 
 const NavBar = () => {
   return (
