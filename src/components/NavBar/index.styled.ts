@@ -4,6 +4,7 @@ import { Colors } from "@/utils/Colors"
 
 export const Container = styled(Box)`
   justify-content: space-between;
+  padding: 24px 40px;
 `
 
 export const ItemContainer = styled(Box)`
@@ -16,7 +17,6 @@ export const ItemContainer = styled(Box)`
 
 export const NavBarRight = styled(Box)`
   align-items: center;
-  gap: 5px;
 `
 
 export const IconBox = styled(Box)`

@@ -14,6 +14,7 @@ export interface BoxProps {
   pr?: number
   pb?: number
   f1?: boolean
+  mr?: number
   ml?: number
   mrAuto?: boolean
   centerAlign?: boolean
@@ -36,6 +37,7 @@ export const Box = styled.div<BoxProps>`
   ${props => (props.pb ? `padding-bottom: ${props.pb}px;` : null)}
   ${props => (props.mrAuto ? "margin-right: auto;" : null)}
   ${props => (props.f1 ? "flex: 1;" : null)}
+  ${props => (props.mr ? `margin-right: ${props.mr}px;` : null)}
   ${props => (props.ml ? `margin-left: ${props.ml}px;` : null)}
   ${props => (props.centerAlign ? "align-items: center;" : null)}
   ${props => (props.gap ? `gap: ${props.gap}px;` : null)}
