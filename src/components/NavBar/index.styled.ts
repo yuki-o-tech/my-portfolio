@@ -3,8 +3,10 @@ import Box from "@/common/Box"
 import { Colors } from "@/utils/Colors"
 
 export const Container = styled(Box)`
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
-  padding: 24px 40px;
+  padding: 24px 100px;
 `
 
 export const ItemContainer = styled(Box)`

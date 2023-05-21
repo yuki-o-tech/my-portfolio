@@ -1,4 +1,4 @@
-interface TopSectionProps {
+export interface TopSectionProps {
   title: string
   subTitle: string
   description: string

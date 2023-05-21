@@ -43,7 +43,11 @@ MyDocument.getInitialProps = async ctx => {
 
     return {
       ...initialProps,
-      styles: [initialProps.styles, styledComponentSheet.getStyleElement()],
+      styles: (
+        <>
+          {initialProps.styles} {styledComponentSheet.getStyleElement()}
+        </>
+      ),
     }
   } finally {
     styledComponentSheet.seal()

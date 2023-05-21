@@ -20,7 +20,7 @@ interface TextProps {
 
 const Text = styled.div<TextProps>`
   font-size: ${props => (props.fs ? `${props.fs}px` : "14px")};
-  color: ${props => (props.color ? `${props.color}` : Colors.GRAY_700)};
+  color: ${props => (props.color ? `${props.color}` : Colors.BLACK)};
   ${({ lh }) => (lh ? `line-height: ${lh}px;` : null)};
   ${({ fw }) => (fw ? `font-weight: ${fw};` : null)};
   ${props => (props.center ? "text-align: center;" : null)};
@@ -37,12 +37,6 @@ const Text = styled.div<TextProps>`
 
 export const RobotoText = styled(Text)`
   font-family: Roboto Mono;
-`
-export const ErrorText = styled.div`
-  font-size: 14px;
-  line-height: 20px;
-  color: ${Colors.GRAY_500};
-  margin-top: 8px;
 `
 
 export const NoWrapText = styled(Text)`

@@ -1,11 +1,11 @@
 import React from "react"
 import { Container } from "./index.styled"
 import Text from "@/common/Text"
-import { topSection } from "@/data/topSection"
+import { topSection } from "src/components/TopScreen/topSectionData"
 
 const TopComponent = () => {
   return (
-    <Container>
+    <Container h={720}>
       <Text fs={20} fw={600} w={460}>
         {topSection.subTitle}
       </Text>
