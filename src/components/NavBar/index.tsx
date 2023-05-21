@@ -8,15 +8,16 @@ import {
   NavBarRight,
   IconBox,
 } from "@/components/NavBar/index.styled"
-import YukiIcon from "@/icons/YukiIcon"
 import LinkedInIcon from "@/icons/LinkedInIcon"
 import { Colors } from "@/utils/Colors"
+import LogoIcon from "@/icons/Logo"
+import InstagramIcon from "@/icons/InstagramIcon"
 
-const items = ["Home", "About me", "My work", "My skills", "Contact me"]
+const items = ["About", "work", "Contact"]
 
 const ItemBox = () => {
   return (
-    <Box gap={42}>
+    <Box gap={42} mr={90} h={33}>
       {items.map((item, index) => {
         return (
           <ItemContainer key={index} pb={34}>
@@ -32,15 +33,27 @@ const ItemBox = () => {
 
 const NavBar = () => {
   return (
-    <Container h={86} bgc={Colors.GRAY_100} pt={30} pr={80} pb={26} pl={80}>
-      <YukiIcon />
-      <ItemBox />
+    <Container h={80} bgc={Colors.WHITE}>
+      <LogoIcon />
+
       <NavBarRight>
-        <Link href="https://www.linkedin.com/feed/" target="_blank">
-          <IconBox w={30} h={30}>
-            <LinkedInIcon />
+        <ItemBox />
+        <Box gap={20}>
+          <IconBox w={25} h={25}>
+            <Link
+              href="https://www.linkedin.com/in/yuki-otsubo-74987b214/"
+              target="_blank">
+              <LinkedInIcon />
+            </Link>
           </IconBox>
-        </Link>
+          <IconBox w={25} h={25}>
+            <Link
+              href="https://www.instagram.com/y__photo_art/"
+              target="_blank">
+              <InstagramIcon />
+            </Link>
+          </IconBox>
+        </Box>
       </NavBarRight>
     </Container>
   )
