@@ -1,6 +1,8 @@
 import Head from "next/head"
 import NavBar from "@/components/NavBar"
-import TopComponent from "@/components/TopScreenComponent"
+import TopComponent from "@/components/TopScreen"
+import SkillScreen from "@/components/SkillScreen"
+import ToolsScreen from "@/components/Tools"
 import GlobalStyle from "../styles/globalCss"
 
 const Page = () => {
@@ -15,6 +17,8 @@ const Page = () => {
       <GlobalStyle />
       <NavBar />
       <TopComponent />
+      <SkillScreen />
+      <ToolsScreen />
     </>
   )
 }
