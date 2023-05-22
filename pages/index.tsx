@@ -7,6 +7,8 @@ import ToolsScreen from "src/components/ToolsScreen"
 import WorkScreen from "@/components/WorkScreen"
 import ClientScreen from "@/components/ClientScreen"
 import AboutScreen from "@/components/AboutScreen"
+import ExperienceScreen from "@/components/ExperienceScreen"
+import FooterScreen from "@/components/FooterScreen"
 
 const Page = () => {
   return (
@@ -25,6 +27,8 @@ const Page = () => {
       <WorkScreen />
       <ClientScreen />
       <AboutScreen />
+      <ExperienceScreen />
+      <FooterScreen />
     </>
   )
 }

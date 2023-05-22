@@ -31,7 +31,7 @@ const AboutScreen = () => {
           <Text fs={32} fw={600} lh={42} color={Colors.BLACK}>
             Yuki Otsubo
           </Text>
-          <Col>
+          <Col gap={8}>
             <Box gap={40}>
               <Text {...titleProps}>Residence</Text>
               <Text {...textProps}>Fukuoka, Japan</Text>
