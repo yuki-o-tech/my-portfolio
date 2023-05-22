@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: Inter;
+    font-family: 'Epilogue', sans-serif;
   }
 
   /* Change the white to any color */

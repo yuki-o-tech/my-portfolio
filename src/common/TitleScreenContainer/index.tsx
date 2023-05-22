@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import { WideCol } from "../Box"
-import Text from "../Text"
+import { WideCol } from "@/common/Box"
+import Text from "@/common/Text"
 
 interface TitleScreenContainerProps {
   title: string
