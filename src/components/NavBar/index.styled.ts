@@ -14,6 +14,7 @@ export const ItemContainer = styled(Box)`
   :hover {
     border-bottom: 2px solid ${Colors.BLACK};
     transition: border-bottom 0.2s;
+    cursor: pointer;
   }
 `
 

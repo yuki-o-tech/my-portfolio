@@ -1,8 +1,8 @@
 import React from "react"
 import Box from "@/common/Box"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
-import { ItemContainer } from "@/components/Tools/index.styled"
-import { toolData } from "@/components/Tools/toolData"
+import { ItemContainer } from "@/components/ToolsScreen/index.styled"
+import { toolData } from "@/components/ToolsScreen/toolData"
 
 export interface ItemProps {
   icon: () => JSX.Element

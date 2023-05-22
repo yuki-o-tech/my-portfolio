@@ -24,7 +24,13 @@ export const cardData: Array<CardProps> = [
   },
   {
     icon: CanvasIcon,
-    title: "UXデザインにおけるキュレーターの洞察力",
+    title: (
+      <>
+        <span>UXデザインにおける</span>
+        <br />
+        <span>キュレーターの洞察力</span>
+      </>
+    ),
     description:
       "前職のキュレーターの経験を活かし、ゲストの体験を常に意識しながら、展覧会を企画してきました。私はUXデザイナーとして、この原則を応用し、ユーザーがどのように製品に接し、どのようにナビゲートするかを想定できるでしょう。",
   },

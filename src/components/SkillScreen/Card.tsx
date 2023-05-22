@@ -16,10 +16,10 @@ const Card = ({ icon, title, description }: CardProps) => {
       <Box h={100} centerAlign>
         {icon()}
       </Box>
-      <Text fs={27} fw={600} lh={30} color={Colors.BLACK} center>
+      <Text fs={27} fw={600} lh={30} color={Colors.BLACK} center h={60}>
         {title}
       </Text>
-      <Text fs={17} fw={400} lh={27} color={Colors.BLACK} center>
+      <Text fs={16} fw={400} lh={27} color={Colors.BLACK} center>
         {description}
       </Text>
     </CardContainer>

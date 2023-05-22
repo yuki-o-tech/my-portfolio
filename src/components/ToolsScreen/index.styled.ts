@@ -1,5 +1,5 @@
-import Box from "src/common/Box"
 import styled from "styled-components"
+import Box from "@/common/Box"
 
 export const ItemContainer = styled(Box)`
   display: grid;
