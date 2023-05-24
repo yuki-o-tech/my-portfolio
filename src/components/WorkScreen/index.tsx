@@ -5,7 +5,7 @@ import { Container } from "@/components/WorkScreen/index.styled"
 
 const WorkScreen = () => {
   return (
-    <TitleScreenContainer title="Tools">
+    <TitleScreenContainer title="Works">
       <Container>
         <ImageCard
           src="/currencyExchangeApp.jpg"
