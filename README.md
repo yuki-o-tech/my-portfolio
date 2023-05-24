@@ -1,4 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio Website
+
+## Project Overview
+
+This is my personal portfolio website. It serves as a platform to showcase my skills, experiences, and the projects I've worked on so far. The website is built using Next.js, React, and TypeScript.
+
+## Installation and Usage
+
+To get this project running locally, first clone the repository. Then, run the following commands:
+
+```bash
+yarn install
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# パーソナルポートフォリオウェブサイト
+
+## プロジェクトの概要
+
+これは私のパーソナルポートフォリオウェブサイトです。これは私のスキル、経験、そして私がこれまでに作成したプロジェクトを紹介するためのプラットフォームとして機能します。このウェブサイトは Next.js、React、TypeScript を用いて構築されています。
+
+## インストールと使用方法
+
+このプロジェクトをローカルで動かすためには、まずリポジトリをクローンしてください。その後、次のコマンドを実行します:
+
+```bash
+yarn install
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Getting Started
 
@@ -12,27 +44,4 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ブラウザで[http://localhost:3000](http://localhost:3000)を開くと結果が表示されます。
