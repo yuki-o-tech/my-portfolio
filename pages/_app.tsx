@@ -3,6 +3,7 @@ import { NextPage } from "next"
 import App from "next/app"
 import type { AppContext, AppProps } from "next/app"
 import Head from "next/head"
+import { Toaster } from "react-hot-toast"
 import GlobalStyle from "../styles/globalCss"
 
 export type NextPageWithLayout = NextPage & {
@@ -18,6 +19,7 @@ function BaseApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
+      <Toaster />
       <Component {...pageProps} />
     </>
   )

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { Colors } from "@/utils/Colors"
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -34,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active
   {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px ${Colors.GRAY_100} inset !important;
   }
 `
 

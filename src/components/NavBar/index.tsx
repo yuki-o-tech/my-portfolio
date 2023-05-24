@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import { Link as Scroll } from "react-scroll"
 import Box from "@/common/Box"
 import Text from "@/common/Text"
 import {
@@ -13,7 +14,11 @@ import { Colors } from "@/utils/Colors"
 import LogoIcon from "@/icons/Logo"
 import InstagramIcon from "@/icons/InstagramIcon"
 
-const items = ["About", "work", "Contact"]
+const items = [
+  { name: "Work", to: "work" },
+  { name: "About", to: "about" },
+  { name: "Contact", to: "contact" },
+]
 
 const ItemBox = () => {
   return (
@@ -22,7 +27,14 @@ const ItemBox = () => {
         return (
           <ItemContainer key={index} pb={34}>
             <Text color={Colors.BLACK} fs={17} fw={500}>
-              {item}
+              <Scroll
+                to={item.to}
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-80}>
+                {item.name}
+              </Scroll>
             </Text>
           </ItemContainer>
         )
