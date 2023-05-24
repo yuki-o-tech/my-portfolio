@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Welcome to My Personal Portfolio Website
 
 ## Project Overview
 
@@ -15,7 +15,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# パーソナルポートフォリオウェブサイト
+# 個人ポートフォリオウェブサイトへようこそ！
 
 ## プロジェクトの概要
 
@@ -40,8 +40,6 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
 ブラウザで[http://localhost:3000](http://localhost:3000)を開くと結果が表示されます。
