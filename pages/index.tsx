@@ -24,11 +24,17 @@ const Page = () => {
       <TopComponent />
       <SkillScreen />
       <ToolsScreen />
-      <WorkScreen />
+      <div id="work">
+        <WorkScreen />
+      </div>
       <ClientScreen />
-      <AboutScreen />
+      <div id="about">
+        <AboutScreen />
+      </div>
       <ExperienceScreen />
-      <FooterScreen />
+      <div id="contact">
+        <FooterScreen />
+      </div>
     </>
   )
 }

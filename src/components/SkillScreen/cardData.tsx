@@ -1,7 +1,7 @@
 import { CardProps } from "@/components/SkillScreen/Card"
 import CodeIcon from "@/icons/CodeIcon"
-import CanvasIcon from "src/icons/CanvasIcon"
-import EyeIcon from "src/icons/EyeIcon"
+import CanvasIcon from "@/icons/CanvasIcon"
+import EyeIcon from "@/icons/EyeIcon"
 
 export const cardData: Array<CardProps> = [
   {

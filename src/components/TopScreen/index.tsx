@@ -1,7 +1,7 @@
 import React from "react"
 import { Container } from "./index.styled"
 import Text from "@/common/Text"
-import { topSection } from "src/components/TopScreen/topSectionData"
+import { topSection } from "@/components/TopScreen/topSectionData"
 
 const TopComponent = () => {
   return (
@@ -12,7 +12,7 @@ const TopComponent = () => {
       <Text fs={100} fw={600} w={665}>
         {topSection.title}
       </Text>
-      <Text fs={17} fw={400} w={514}>
+      <Text fs={17} fw={400} w={530}>
         {topSection.description}
       </Text>
     </Container>
