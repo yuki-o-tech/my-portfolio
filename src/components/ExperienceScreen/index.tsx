@@ -26,7 +26,7 @@ const ExperienceScreen = () => {
       <Col gap={48}>
         {experienceData.map((el, index) => {
           return (
-            <Col gap={24} key={index}>
+            <Col gap={24} key={index} bgc="red">
               <Text {...titleProps}>{el.title}</Text>
               <Text {...textProps}>{el.description}</Text>
             </Col>
