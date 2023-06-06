@@ -1,7 +1,6 @@
 import React from "react"
-import Box from "@/common/Box"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
-import { ItemContainer } from "@/components/ToolsScreen/index.styled"
+import { IconBox, ItemContainer } from "@/components/ToolsScreen/index.styled"
 import { toolData } from "@/components/ToolsScreen/toolData"
 
 export interface ItemProps {
@@ -13,7 +12,7 @@ const ToolsScreen = () => {
     <TitleScreenContainer title="Tools">
       <ItemContainer>
         {toolData.map((el, index) => {
-          return <Box key={index}>{el.icon()}</Box>
+          return <IconBox key={index}>{el.icon()}</IconBox>
         })}
       </ItemContainer>
     </TitleScreenContainer>

@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { Col } from "@/common/Box"
 import Text from "@/common/Text"
-import { CardContainer } from "@/common/ImageCard/index.styled"
+import { CardContainer, ImageContainer } from "@/common/ImageCard/index.styled"
 
 export interface ImageCardProps {
   src: string
@@ -20,8 +20,14 @@ const ImageCard = ({
   imageHeight,
 }: ImageCardProps) => {
   return (
-    <CardContainer w={520} mh={422} hasLink={hasLink}>
-      <Image src={src} alt="image" width={520} height={imageHeight} />
+    <CardContainer mh={422} hasLink={hasLink}>
+      <ImageContainer
+        src={src}
+        alt="image"
+        width={520}
+        height={imageHeight}
+        layout="responsive"
+      />
       <Col p={15} gap={16}>
         <Text fs={20} fw={600} lh={30}>
           {title}

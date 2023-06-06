@@ -13,6 +13,9 @@ export const Container = styled(Box)`
   @media (max-width: 928px) {
     grid-template-columns: 1fr;
   }
+  @media (max-width: 390px) {
+    padding: unset;
+  }
 `
 
 export const CardContainer = styled(Col)`

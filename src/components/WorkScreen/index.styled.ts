@@ -9,4 +9,9 @@ export const Container = styled(Box)`
   @media (max-width: 928px) {
     grid-template-columns: 1fr;
   }
+  @media (max-width: 390px) {
+    grid-template-columns: 1fr;
+    column-gap: 65px;
+    row-gap: 65px;
+  }
 `

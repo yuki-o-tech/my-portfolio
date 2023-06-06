@@ -4,6 +4,9 @@ import { Colors } from "@/utils/Colors"
 
 export const Container = styled(Col)`
   padding: 55px 100px 150px 100px;
+  @media (max-width: 390px) {
+    padding: 55px 30px;
+  }
 `
 
 export const Grid = styled(Box)`
@@ -32,6 +35,9 @@ const commonFieldStyle = css`
   line-height: 27px;
   padding: 20px 30px;
   border: unset;
+  @media (max-width: 390px) {
+    width: 100%;
+  }
   :focus {
     outline: solid 2px ${Colors.GREEN};
   }
@@ -86,5 +92,11 @@ export const Button = styled.button`
   }
   :active {
     transition: transform 0.3s ease-in-out;
+  }
+  @media (max-width: 390px) {
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    padding: unset;
   }
 `

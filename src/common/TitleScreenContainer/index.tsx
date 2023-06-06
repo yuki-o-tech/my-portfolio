@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import { WideCol } from "@/common/Box"
 import Text from "@/common/Text"
+import { ScreenContainer } from "@/common/TitleScreenContainer/index.styled"
 
 interface TitleScreenContainerProps {
   title: string
@@ -12,12 +12,12 @@ const TitleScreenContainer = ({
   children,
 }: TitleScreenContainerProps) => {
   return (
-    <WideCol pl={100} pr={100} pt={50} pb={50} gap={56} centerAlign>
+    <ScreenContainer centerAlign>
       <Text fs={32} fw={600} lh={32}>
         {title}
       </Text>
       {children}
-    </WideCol>
+    </ScreenContainer>
   )
 }
 
