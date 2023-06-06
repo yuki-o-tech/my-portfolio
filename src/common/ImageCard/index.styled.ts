@@ -11,6 +11,12 @@ export const CardContainer = styled(Col)<ContainerProps>`
   :hover {
     ${props => (props.hasLink ? "cursor: pointer;" : null)}
   }
+  @media (max-width: 928px) {
+    width: 470px;
+  }
+  @media (max-width: 390px) {
+    width: 330px;
+  }
 `
 
 export const ImageContainer = styled(Image)`
