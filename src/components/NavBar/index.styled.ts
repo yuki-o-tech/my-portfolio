@@ -7,6 +7,9 @@ export const Container = styled(Box)`
   width: 100%;
   justify-content: space-between;
   padding: 24px 100px;
+  @media (max-width: 390px) {
+    padding: 24px 30px;
+  }
 `
 
 export const ItemContainer = styled(Box)`
@@ -15,6 +18,9 @@ export const ItemContainer = styled(Box)`
     border-bottom: 2px solid ${Colors.BLACK};
     transition: border-bottom 0.2s;
     cursor: pointer;
+  }
+  @media (max-width: 390px) {
+    display: none;
   }
 `
 

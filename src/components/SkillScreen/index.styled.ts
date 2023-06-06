@@ -10,6 +10,12 @@ export const Container = styled(Box)`
   column-gap: 85px;
   justify-items: center;
   align-items: self-start;
+  @media (max-width: 928px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 390px) {
+    padding: unset;
+  }
 `
 
 export const CardContainer = styled(Col)`

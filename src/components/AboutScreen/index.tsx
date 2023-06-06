@@ -1,9 +1,13 @@
 import React from "react"
 import Image from "next/image"
-import Box, { Col } from "@/common/Box"
-import Text from "@/common/Text"
+import { Col } from "@/common/Box"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
-import { Grid } from "@/components/AboutScreen/index.styled"
+import {
+  Description,
+  Grid,
+  RowContainer,
+  Title,
+} from "@/components/AboutScreen/index.styled"
 import { Colors } from "@/utils/Colors"
 
 export interface ItemProps {
@@ -12,34 +16,37 @@ export interface ItemProps {
 
 const AboutScreen = () => {
   const titleProps = {
-    fs: 26,
     fw: 600,
     lh: 26,
     color: Colors.BLACK,
   }
   const textProps = {
-    fs: 18,
-    fw: 600,
     lh: 26,
     color: Colors.BLACK,
   }
   return (
     <TitleScreenContainer title="About">
       <Grid>
-        <Image src="/portrait.jpg" alt="portrait" width={520} height={280} />
+        <Image
+          src="/portrait.jpg"
+          alt="portrait"
+          width={520}
+          height={280}
+          layout="responsive"
+        />
         <Col gap={34}>
-          <Text fs={32} fw={600} lh={42} color={Colors.BLACK}>
+          <Title fs={32} fw={600} lh={42} color={Colors.BLACK}>
             Yuki Otsubo
-          </Text>
+          </Title>
           <Col gap={8}>
-            <Box gap={40}>
-              <Text {...titleProps}>Residence</Text>
-              <Text {...textProps}>Fukuoka, Japan</Text>
-            </Box>
-            <Box gap={40}>
-              <Text {...titleProps}>Languages</Text>
-              <Text {...textProps}>Japanese, English</Text>
-            </Box>
+            <RowContainer>
+              <Title {...titleProps}>Residence</Title>
+              <Description {...textProps}>Fukuoka, Japan</Description>
+            </RowContainer>
+            <RowContainer>
+              <Title {...titleProps}>Languages</Title>
+              <Description {...textProps}>Japanese, English</Description>
+            </RowContainer>
           </Col>
         </Col>
       </Grid>

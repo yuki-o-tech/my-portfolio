@@ -6,4 +6,12 @@ export const Container = styled(Box)`
   grid-template-columns: repeat(2, 1fr);
   column-gap: 40px;
   row-gap: 40px;
+  @media (max-width: 928px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 390px) {
+    grid-template-columns: 1fr;
+    column-gap: 65px;
+    row-gap: 65px;
+  }
 `

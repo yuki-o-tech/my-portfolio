@@ -1,8 +1,8 @@
 import React from "react"
 import { Col } from "@/common/Box"
-import Text from "@/common/Text"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import { experienceData } from "@/components/ExperienceScreen/experienceData"
+import { Description, Title } from "@/components/ExperienceScreen/index.styled"
 import { Colors } from "@/utils/Colors"
 
 export interface ItemProps {
@@ -11,13 +11,11 @@ export interface ItemProps {
 
 const ExperienceScreen = () => {
   const titleProps = {
-    fs: 24,
     fw: 600,
     lh: 26,
     color: Colors.BLACK,
   }
   const textProps = {
-    fs: 16,
     lh: 26,
     color: Colors.BLACK,
   }
@@ -27,8 +25,8 @@ const ExperienceScreen = () => {
         {experienceData.map((el, index) => {
           return (
             <Col gap={24} key={index}>
-              <Text {...titleProps}>{el.title}</Text>
-              <Text {...textProps}>{el.description}</Text>
+              <Title {...titleProps}>{el.title}</Title>
+              <Description {...textProps}>{el.description}</Description>
             </Col>
           )
         })}
