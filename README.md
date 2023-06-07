@@ -30,16 +30,4 @@ yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
 ブラウザで[http://localhost:3000](http://localhost:3000)を開くと結果が表示されます。
