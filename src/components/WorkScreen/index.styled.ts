@@ -9,7 +9,7 @@ export const Container = styled(Box)`
   @media (max-width: 928px) {
     grid-template-columns: 1fr;
   }
-  @media (max-width: 390px) {
+  @media (max-width: 430px) {
     grid-template-columns: 1fr;
     column-gap: 65px;
     row-gap: 65px;

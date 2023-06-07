@@ -19,16 +19,10 @@ export const experienceData: Array<ExperienceDataProps> = [
     description:
       "キュレーターとして、大学や佐賀県にゆかりのあるアーティストの調査と研究を行い、一般向けの企画展を開催しました。また、展覧会に関連するチラシ、ポスター、キャプション、パネルの作成や動画編集も担当しました。教育機関としての役割も果たし、博物館実習の授業科目の補助や、公開講座やワークショップの教育普及の補助も行いました。毎年発行される年報への論文寄稿も行っています。",
   },
-  {
-    title: "2014 - 2017: Saga University Museum",
-    description:
-      "キュレーターとして、大学や佐賀県にゆかりのあるアーティストの調査と研究を行い、一般向けの企画展を開催しました。また、展覧会に関連するチラシ、ポスター、キャプション、パネルの作成や動画編集も担当しました。教育機関としての役割も果たし、博物館実習の授業科目の補助や、公開講座やワークショップの教育普及の補助も行いました。毎年発行される年報への論文寄稿も行っています。",
-  },
   { title: "2013 Kyushu Sangyo University Museum", description: "" },
   {
     title: "2012 Fukutake Foundation Inc.(Benesse Art Site Naoshima)",
     description: "",
   },
   { title: "2012 Graduated Kyushu Sangyo University", description: "" },
-  { title: "1989 Born in Saga, JAPAN", description: "" },
 ]

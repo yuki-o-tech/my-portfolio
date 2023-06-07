@@ -12,8 +12,9 @@ export const Container = styled(Box)`
   align-items: self-start;
   @media (max-width: 928px) {
     grid-template-columns: 1fr;
+    padding: 50px;
   }
-  @media (max-width: 390px) {
+  @media (max-width: 430px) {
     padding: unset;
   }
 `

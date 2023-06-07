@@ -8,8 +8,12 @@ export const ItemContainer = styled(Box)`
   row-gap: 128px;
   @media (max-width: 928px) {
     grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    justify-items: center;
+    column-gap: initial;
+    row-gap: 60px;
   }
-  @media (max-width: 390px) {
+  @media (max-width: 430px) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 70px;
     row-gap: 25px;
@@ -17,7 +21,7 @@ export const ItemContainer = styled(Box)`
 `
 
 export const IconBox = styled(Box)`
-  @media (max-width: 390px) {
+  @media (max-width: 430px) {
     width: 50px;
   }
 `

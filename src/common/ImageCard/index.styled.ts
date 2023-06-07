@@ -12,16 +12,16 @@ export const CardContainer = styled(Col)<ContainerProps>`
     ${props => (props.hasLink ? "cursor: pointer;" : null)}
   }
   @media (max-width: 928px) {
-    width: 470px;
+    width: 100%;
   }
-  @media (max-width: 390px) {
-    width: 330px;
+  @media (max-width: 430px) {
+    width: 370px;
   }
 `
 
 export const ImageContainer = styled(Image)`
-  width: 520px;
-  @media (max-width: 390px) {
-    width: 330px;
+  width: 100%;
+  @media (max-width: 430px) {
+    width: 370px;
   }
 `
