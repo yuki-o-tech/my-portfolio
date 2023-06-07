@@ -5,6 +5,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  if (!process.env.MAIL_USER || !process.env.MAIL_PASS) {
+    res.status(500).json({
+      error: "The server is not properly configured to send emails.",
+    })
+    return
+  }
+
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
