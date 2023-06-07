@@ -9,7 +9,10 @@ export const Grid = styled(Box)`
 `
 export const Title = styled(Text)`
   font-size: 26px;
-  @media (max-width: 390px) {
+  @media (max-width: 928px) {
+    font-size: 24px;
+  }
+  @media (max-width: 430px) {
     font-size: 20px;
   }
 `
@@ -17,7 +20,7 @@ export const Title = styled(Text)`
 export const Description = styled(Text)`
   font-size: 18px;
   font-weight: 600;
-  @media (max-width: 390px) {
+  @media (max-width: 928px) {
     font-size: 14px;
     font-weight: 400;
   }

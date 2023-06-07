@@ -1,5 +1,4 @@
 import React from "react"
-import Image from "next/image"
 import { Col } from "@/common/Box"
 import Text from "@/common/Text"
 import { CardContainer, ImageContainer } from "@/common/ImageCard/index.styled"
