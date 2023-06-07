@@ -14,14 +14,8 @@ export const CardContainer = styled(Col)<ContainerProps>`
   @media (max-width: 928px) {
     width: 100%;
   }
-  @media (max-width: 430px) {
-    width: 370px;
-  }
 `
 
 export const ImageContainer = styled(Image)`
   width: 100%;
-  @media (max-width: 430px) {
-    width: 370px;
-  }
 `
