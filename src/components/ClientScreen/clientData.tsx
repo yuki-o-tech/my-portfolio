@@ -74,20 +74,4 @@ export const clientData: Array<CardProps> = [
       </>
     ),
   },
-  {
-    link: "https://radiko.jp/",
-    src: "/radiko.jpg",
-    title: "Radiko",
-    description: (
-      <>
-        <span>
-          各局のラジオ放送を生放送と録音で提供する日本のサービスのアップデートに伴うデザイン等の修正に携わりました。
-        </span>
-        <br />
-        <span>
-          デスクトップとスマートフォンではレスポンシブデザインが大きく異なると感じ、どのようにディレクトリ構造を構築するか苦労しました。
-        </span>
-      </>
-    ),
-  },
 ]

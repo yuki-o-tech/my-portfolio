@@ -51,6 +51,7 @@ export const Description = styled(Text)`
   font-weight: 400;
   @media (max-width: 928px) {
     width: 100%;
+    max-width: 530px;
     font-size: 14px;
   }
 `
