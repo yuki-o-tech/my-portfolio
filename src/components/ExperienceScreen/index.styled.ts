@@ -19,10 +19,14 @@ export const Title = styled(Text)`
 `
 
 export const Description = styled(Text)`
+  width: 1080px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: ${Colors.BLACK};
+  @media (max-width: 1280px) {
+    width: unset;
+  }
   @media (max-width: 928px) {
     font-size: 14px;
   }
