@@ -15,10 +15,7 @@ const ExperienceScreen = () => {
     lh: 26,
     color: Colors.BLACK,
   }
-  const textProps = {
-    lh: 26,
-    color: Colors.BLACK,
-  }
+
   return (
     <TitleScreenContainer title="Work Experience">
       <Col gap={48}>
@@ -26,7 +23,7 @@ const ExperienceScreen = () => {
           return (
             <Col gap={24} key={index}>
               <Title {...titleProps}>{el.title}</Title>
-              <Description {...textProps}>{el.description}</Description>
+              <Description>{el.description}</Description>
             </Col>
           )
         })}

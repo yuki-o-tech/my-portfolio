@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Box from "@/common/Box"
 import Text from "@/common/Text"
+import { Colors } from "@/utils/Colors"
 
 export const Grid = styled(Box)`
   display: grid;
@@ -18,10 +19,11 @@ export const Title = styled(Text)`
 `
 
 export const Description = styled(Text)`
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: ${Colors.BLACK};
   @media (max-width: 928px) {
     font-size: 14px;
-    font-weight: 400;
   }
 `

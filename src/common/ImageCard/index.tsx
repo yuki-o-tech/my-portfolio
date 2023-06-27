@@ -6,7 +6,7 @@ import { CardContainer, ImageContainer } from "@/common/ImageCard/index.styled"
 export interface ImageCardProps {
   src: string
   title: string
-  description?: string
+  description?: string | React.ReactNode
   hasLink: boolean
   imageHeight: number
 }
