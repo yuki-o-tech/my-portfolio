@@ -30,7 +30,17 @@ export const experienceData: Array<ExperienceDataProps> = [
   { title: "2012 Graduated Kyushu Sangyo University", description: "" },
   {
     title: "出版物",
-    description:
-      "『大隈重信記念館50周年記念誌 誕生地に受継がれる志』佐賀市 大隈重信記念館、2018年、P8 - 48 ",
+    description: (
+      <>
+        <li>
+          『大隈重信記念館50周年記念誌 誕生地に受継がれる志』佐賀市
+          大隈重信記念館、2018年、P8 - 48
+        </li>
+        <li>
+          『久富邦夫をめぐるふたつの企画展―「修業」と「創造」』平成28年度
+          佐賀大学美術館 年報＋紀要、 2017年、P37- 43
+        </li>
+      </>
+    ),
   },
 ]

@@ -144,7 +144,9 @@ const LeftContainer = () => {
         Contact
       </Text>
       <Text fs={17} lh={26} color={Colors.BLACK}>
-        Please feel free to contact me if you have any questions.
+        お仕事のご依頼・ご相談・ご質問などお気軽にお問合せください。
+        <br />
+        お問合せは右のフォームよりお願いいたします。
       </Text>
       <Box gap={16}>
         <IconBox w={25} h={25}>
