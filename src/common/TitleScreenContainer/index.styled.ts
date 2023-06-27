@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { WideCol } from "@/common/Box"
 
 export const ScreenContainer = styled(WideCol)`
-  padding: 50px 100px;
+  padding: 50px 320px;
   gap: 56px;
   @media (max-width: 928px) {
     padding: 50px;
