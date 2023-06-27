@@ -12,7 +12,7 @@ export interface CardProps {
 
 const Card = ({ icon, title, description }: CardProps) => {
   return (
-    <CardContainer gap={42} p={40}>
+    <CardContainer gap={42}>
       <Box h={100} centerAlign>
         {icon()}
       </Box>

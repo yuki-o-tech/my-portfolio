@@ -19,7 +19,7 @@ const ImageCard = ({
   imageHeight,
 }: ImageCardProps) => {
   return (
-    <CardContainer mh={422} hasLink={hasLink}>
+    <CardContainer mh={500} hasLink={hasLink}>
       <ImageContainer
         src={src}
         alt="image"

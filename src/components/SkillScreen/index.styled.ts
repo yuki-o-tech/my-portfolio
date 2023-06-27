@@ -7,10 +7,9 @@ export const Container = styled(Box)`
   background: ${Colors.WHITE};
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 85px;
   justify-items: center;
   align-items: self-start;
-  @media (max-width: 928px) {
+  @media (max-width: 1280px) {
     grid-template-columns: 1fr;
     padding: 50px;
   }
@@ -21,4 +20,12 @@ export const Container = styled(Box)`
 
 export const CardContainer = styled(Col)`
   align-items: center;
+  padding: 40px;
+  max-width: 330px;
+  @media (max-width: 1280px) {
+    padding: 20px;
+  }
+  @media (max-width: 928px) {
+    width: 400px;
+  }
 `

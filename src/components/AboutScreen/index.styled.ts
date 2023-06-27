@@ -1,18 +1,15 @@
 import styled from "styled-components"
-import Image from "next/image"
 import Box from "@/common/Box"
 import Text from "@/common/Text"
 
 export const Grid = styled(Box)`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 520px);
   column-gap: 48px;
-  @media (max-width: 928px) {
+  @media (max-width: 1280px) {
     width: 100%;
+    max-width: 520px;
     grid-template-columns: 1fr;
-    row-gap: 20px;
-  }
-  @media (max-width: 430px) {
     row-gap: 20px;
   }
 `

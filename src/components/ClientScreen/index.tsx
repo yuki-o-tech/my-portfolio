@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import ImageCard from "@/common/ImageCard"
-import { Container } from "@/components/WorkScreen/index.styled"
+import { Container } from "@/components/ClientScreen/index.styled"
 import { clientData } from "@/components/ClientScreen/clientData"
 
 const ClientScreen = () => {
