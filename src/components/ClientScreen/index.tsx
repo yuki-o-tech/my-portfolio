@@ -16,6 +16,7 @@ const ClientScreen = () => {
                 <ImageCard
                   src={el.src}
                   title={el.title}
+                  label={el.label}
                   description={el.description}
                   hasLink
                   imageHeight={270}

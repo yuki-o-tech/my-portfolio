@@ -1,11 +1,13 @@
 import React from "react"
-import { Col } from "@/common/Box"
+import Box, { Col } from "@/common/Box"
 import Text from "@/common/Text"
 import { CardContainer, ImageContainer } from "@/common/ImageCard/index.styled"
+import Label from "../Label"
 
 export interface ImageCardProps {
   src: string
   title: string
+  label?: string
   description?: string | React.ReactNode
   hasLink: boolean
   imageHeight: number
@@ -14,10 +16,22 @@ export interface ImageCardProps {
 const ImageCard = ({
   src,
   title,
+  label,
   description,
   hasLink,
   imageHeight,
 }: ImageCardProps) => {
+
+  const hasLabel = () => {
+    if (label) {
+      return (
+        <Label text={label} />
+      )
+    } else {
+      null
+    }
+  }
+
   return (
     <CardContainer mh={500} hasLink={hasLink}>
       <ImageContainer
@@ -28,9 +42,13 @@ const ImageCard = ({
         layout="responsive"
       />
       <Col p={15} gap={16}>
-        <Text fs={20} fw={600} lh={30}>
+        <Box gap={10} centerAlign> 
+          <Text fs={20} fw={600} lh={30}>
           {title}
         </Text>
+        {hasLabel()}
+        </Box>
+       
         <Text fs={14} fw={400} lh={20}>
           {description}
         </Text>
