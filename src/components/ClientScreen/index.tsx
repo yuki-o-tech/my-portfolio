@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import ImageCard from "@/common/ImageCard"
-import { Container } from "@/components/ClientScreen/index.styled"
+import { Container, ItemContainer } from "@/components/ClientScreen/index.styled"
 import { clientData } from "@/components/ClientScreen/clientData"
 
 const ClientScreen = () => {
@@ -11,7 +11,7 @@ const ClientScreen = () => {
       <Container>
         {clientData.map((el, index) => {
           return (
-            <div key={index}>
+            <ItemContainer key={index}>
               <Link href={el.link} target="_blank">
                 <ImageCard
                   src={el.src}
@@ -22,7 +22,7 @@ const ClientScreen = () => {
                   imageHeight={270}
                 />
               </Link>
-            </div>
+            </ItemContainer>
           )
         })}
       </Container>

@@ -7,7 +7,7 @@ interface CardProps {
 
 export const workData: Array<CardProps> = [
   {
-    link: "https://www.figma.com/proto/p7kHdH2mw5AydtOZ9uEX29/Crypto-calculator-App?page-id=0%3A1&type=design&node-id=20-611&viewport=-341%2C248%2C0.81&scaling=scale-down&starting-point-node-id=20%3A611&show-proto-sidebar=1",
+    link: "/works",
     src: "/currencyExchangeApp.jpg",
     title: "Currency Exchanger App",
     description:

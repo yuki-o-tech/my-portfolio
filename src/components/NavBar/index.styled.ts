@@ -7,6 +7,7 @@ export const Container = styled(Box)`
   width: 100%;
   justify-content: space-between;
   padding: 24px 100px;
+  z-index: 9999;
   @media (max-width: 928px) {
     padding: 24px 50px;
   }

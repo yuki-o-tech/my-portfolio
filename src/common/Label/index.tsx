@@ -1,7 +1,7 @@
 import React from "react"
+import { RobotoText } from "@/common/Text"
+import { LabelBox } from "@/common/Label/index.styled"
 import { Colors } from "@/utils/Colors"
-import { LabelBox } from "./index.styled"
-import { RobotoText } from "../Text"
 
 
 interface LabelProps{

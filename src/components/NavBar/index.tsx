@@ -14,6 +14,10 @@ import { Colors } from "@/utils/Colors"
 import LogoIcon from "@/icons/Logo"
 import InstagramIcon from "@/icons/InstagramIcon"
 
+interface NavBarProps {
+  hideItemBox?: boolean;
+}
+
 const items = [
   { name: "Work", to: "work" },
   { name: "About", to: "about" },
@@ -43,13 +47,15 @@ const ItemBox = () => {
   )
 }
 
-const NavBar = () => {
+const NavBar = ({ hideItemBox }: NavBarProps) => {
   return (
     <Container h={80} bgc={Colors.WHITE}>
-      <LogoIcon />
+      <Link href="/">
+        <LogoIcon />
+      </Link>
 
       <NavBarRight>
-        <ItemBox />
+        {hideItemBox ? null : <ItemBox />}
         <Box gap={20}>
           <IconBox w={25} h={25}>
             <Link

@@ -1,8 +1,8 @@
 import React from "react"
 import Box, { Col } from "@/common/Box"
+import Label from "@/common/Label"
 import Text from "@/common/Text"
 import { CardContainer, ImageContainer } from "@/common/ImageCard/index.styled"
-import Label from "../Label"
 
 export interface ImageCardProps {
   src: string

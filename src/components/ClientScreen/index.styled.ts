@@ -12,3 +12,15 @@ export const Container = styled(Box)`
     max-width: 520px;
   }
 `
+
+export const ItemContainer = styled(Box)`
+:hover {
+  transform: translateY(-8px);
+  transition: all 0.2s ease 0s;
+
+  & * {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+`
