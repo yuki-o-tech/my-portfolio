@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import ImageCard from "@/common/ImageCard"
-import { Container } from "@/components/WorkScreen/index.styled"
+import { Container, ItemContainer } from "@/components/WorkScreen/index.styled"
 import { workData } from "@/components/WorkScreen/workData"
 
 const WorkScreen = () => {
@@ -11,8 +11,8 @@ const WorkScreen = () => {
       <Container>
         {workData.map((el, index) => {
           return (
-            <div key={index}>
-              <Link href={el.link} target="_blank">
+            <ItemContainer key={index}>
+              <Link href={el.link}>
                 <ImageCard
                   src={el.src}
                   title={el.title}
@@ -21,7 +21,7 @@ const WorkScreen = () => {
                   imageHeight={330}
                 />
               </Link>
-            </div>
+            </ItemContainer>
           )
         })}
       </Container>

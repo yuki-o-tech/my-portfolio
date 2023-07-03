@@ -36,7 +36,7 @@ const Text = styled.div<TextProps>`
 `
 
 export const RobotoText = styled(Text)`
-  font-family: Roboto Mono;
+  font-family: Roboto;
 `
 
 export const NoWrapText = styled(Text)`

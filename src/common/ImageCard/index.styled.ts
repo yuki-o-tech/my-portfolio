@@ -1,9 +1,9 @@
 import styled from "styled-components"
 import Image from "next/image"
-import { Col } from "@/common/Box"
+import  { Col } from "@/common/Box"
 
 interface ContainerProps {
-  hasLink: boolean
+   hasLink: boolean
 }
 
 export const CardContainer = styled(Col)<ContainerProps>`
