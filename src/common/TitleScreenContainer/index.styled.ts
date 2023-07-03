@@ -6,7 +6,7 @@ interface ScreenContainerProps{
 }
 
 export const ScreenContainer = styled(WideCol)<ScreenContainerProps>`
-  padding: ${props => props.hasTop ?"130px 100px 200px 100px"  :"50px 100px 200px 100px"};
+  padding: ${props => props.hasTop ?"130px 100px 100px 100px"  :"50px 100px 200px 100px"};
   gap: 56px;
   @media (max-width: 928px) {
     padding: ${props => props.hasTop ?"130px 50px 50px 50px"  :"50px"};
