@@ -4,22 +4,29 @@ import Button from "@mui/material/Button"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import Box, { Col } from "@/common/Box"
 import Text from "@/common/Text"
-import { currencyExchangeData, workElementTitles } from "@/components/WorksPage/worksPageData"
+import { uiuxworksData, leafletsWorksData } from "@/components/WorksPage/worksPageData"
 import { FigmaButton, ImageContainer, BaseText } from "@/components/WorksPage/index.styled"
+import { Colors } from "@/utils/Colors"
 
 interface TextProps {
     leftText: string
     rightText: string
 }
+
+type WorkData = {
+    image: string;
+    link?: string;
+    [key: string]: string | undefined;
+};
+
 interface WorksBoxProps {
-    rightTextData: string[]
-    href: string
+    workData: WorkData;
 }
 
 const TextBox = ({ leftText, rightText }: TextProps) => {
     const textProps = {
         fs: 16,
-        color: "#2D2D2D",
+        color: Colors.BLACK,
         lh: 27,
         fw: 400,
 
@@ -32,51 +39,59 @@ const TextBox = ({ leftText, rightText }: TextProps) => {
     )
 }
 
-const WorksBox = ({ rightTextData, href }: WorksBoxProps) => {
+
+const WorksBox = ({ workData }: WorksBoxProps) => {
     return (
         <>
             <Col pt={80} pb={20}>
-                {rightTextData.map((rightText, index) => (
-                    <TextBox key={index} leftText={workElementTitles[index]} rightText={rightText} />
-                ))}
+                {Object.entries(workData).map(([key, value], index) => {
+                    if (key !== "image" && key !== "link") {
+                        return <TextBox key={index} leftText={key} rightText={value as string} />
+                    }
+                })}
             </Col>
-            <FigmaButton
-                onClick={() => window.open(href, '_blank')}
-                variant="outlined"
-            >
-                Go to Figma
-            </FigmaButton>
+            {workData.link ?
+                <FigmaButton onClick={() => window.open(workData.link, '_blank')} variant="outlined">Go to Figma</FigmaButton>
+                : null
+            }
         </>
     )
 }
 
 const WorksPageLayout = () => {
     return (
-        <TitleScreenContainer title="Works" hasTop>
-            <Col centerAlign>
-                <ImageContainer>
-                    <Image src="/currencyExchangeApp.jpg" alt="image" layout="responsive" width={1040} height={520} />
-                </ImageContainer>
-                <WorksBox rightTextData={currencyExchangeData} href=
-                    "https://www.figma.com/proto/p7kHdH2mw5AydtOZ9uEX29/Crypto-calculator-App?page-id=0%3A1&type=design&node-id=20-611&viewport=-341%2C248%2C0.81&scaling=scale-down&starting-point-node-id=20%3A611&show-proto-sidebar=1"
-                />
-            </Col>
-            <Button
-                component="a"
-                href={"/"}
-                // variant="outlined"
-                color="secondary"
-            >
-                Back
-            </Button>
-        </TitleScreenContainer>
+        <Col>
+            <TitleScreenContainer title="UI/UX design" hasTop>
+                {uiuxworksData.map((work, index) => (
+                    <Col key={index} centerAlign>
+                        <ImageContainer>
+                            <Image src={`/${work.image}`} alt="work image" layout="responsive" width={1040} height={520} />
+                        </ImageContainer>
+                        <WorksBox workData={work} />
+                    </Col>
+                ))}
+
+            </TitleScreenContainer>
+            <TitleScreenContainer title="Other design" >
+                {leafletsWorksData.map((work, index) => (
+                    <Col key={index} centerAlign>
+                        <ImageContainer>
+                            <Image src={`/${work.image}`} alt="work image" layout="responsive" width={1040} height={520} />
+                        </ImageContainer>
+                        <WorksBox workData={work} />
+                    </Col>
+                ))}
+                <Button
+                    component="a"
+                    href={"/"}
+                    color="secondary"
+                    size="large"
+                >
+                    Back
+                </Button>
+            </TitleScreenContainer>
+        </Col>
     )
 }
 
 export default WorksPageLayout
-
-
-
-
-
-

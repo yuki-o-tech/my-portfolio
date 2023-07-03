@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import Button from "@mui/material/Button"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import ImageCard from "@/common/ImageCard"
 import { Container, ItemContainer } from "@/components/WorkScreen/index.styled"
@@ -25,6 +26,16 @@ const WorkScreen = () => {
           )
         })}
       </Container>
+      <Button
+        component="a"
+        href={"/works"}
+        // variant="outlined"
+        color="secondary"
+        variant="outlined"
+        size="large"
+      >
+        More {">"}
+      </Button>
     </TitleScreenContainer>
   )
 }
