@@ -16,7 +16,7 @@ import { TextButton } from "@/common/Button"
 SwiperCore.use([Pagination, Navigation])
 
 const WorkScreen = () => {
-  const images = ["/currencyExchangeApp.jpg", "/leaflets/hisatomiSaga.jpg", "/leaflets/hisatomiTokyo.jpg", "/leaflets/medical.jpg", "/leaflets/woodPrint.jpg"]
+  const images = ["/currencyExchangeApp.jpg", "/hisatomiSaga.jpg", "/hisatomiTokyo.jpg", "/medical.jpg", "/woodPrint.jpg"]
   return (
     <SectionContainer>
       <Text fs={32} fw={600} lh={32}>
