@@ -1,7 +1,6 @@
 import React from "react"
 import Link from "next/link"
 import Image from 'next/image'
-import Button from "@mui/material/Button"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Navigation } from 'swiper'
 import 'swiper/css/bundle'
@@ -11,14 +10,13 @@ import TitleScreenContainer from "@/common/TitleScreenContainer"
 import ImageCard from "@/common/ImageCard"
 import { SectionContainer, SwiperBox } from "@/components/WorkScreen/index.styled"
 import { workData } from "@/components/WorkScreen/workData"
-
+import { TextButton } from "@/common/Button"
 
 
 SwiperCore.use([Pagination, Navigation])
 
 const WorkScreen = () => {
-  const images = ["/currencyExchangeApp.jpg", "/currencyExchangeApp.jpg", "/currencyExchangeApp.jpg", "/currencyExchangeApp.jpg", "/currencyExchangeApp.jpg", "/currencyExchangeApp.jpg"]
-
+  const images = ["/currencyExchangeApp.jpg", "/leaflets/hisatomiSaga.jpg", "/leaflets/hisatomiTokyo.jpg", "/leaflets/medical.jpg", "/leaflets/woodPrint.jpg"]
   return (
     <SectionContainer>
       <Text fs={32} fw={600} lh={32}>
@@ -44,16 +42,9 @@ const WorkScreen = () => {
           })}
         </Swiper>
       </SwiperBox>
-      <Button
-        component="a"
-        href={"/works"}
-        // variant="outlined"
-        color="secondary"
-        variant="outlined"
-        size="large"
-      >
-        More {">"}
-      </Button>
+      <Link href="/works">
+        <TextButton >More {">"}</TextButton>
+      </Link>
     </SectionContainer>
   )
 }

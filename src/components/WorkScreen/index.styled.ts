@@ -3,6 +3,7 @@ import Box, { WideCol } from "@/common/Box"
 
 export const SectionContainer = styled(WideCol)`
 text-align: center;
+padding-bottom:100px;
 
 `
 

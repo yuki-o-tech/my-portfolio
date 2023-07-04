@@ -1,8 +1,9 @@
 import React from "react"
+import Link from "next/link"
 import Image from "next/image"
-import Button from "@mui/material/Button"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import Box, { Col } from "@/common/Box"
+import { TextButton } from "@/common/Button"
 import Text from "@/common/Text"
 import { uiuxworksData, leafletsWorksData } from "@/components/WorksPage/worksPageData"
 import { FigmaButton, ImageContainer, BaseText } from "@/components/WorksPage/index.styled"
@@ -81,14 +82,9 @@ const WorksPageLayout = () => {
                         <WorksBox workData={work} />
                     </Col>
                 ))}
-                <Button
-                    component="a"
-                    href={"/"}
-                    color="secondary"
-                    size="large"
-                >
-                    Back
-                </Button>
+                <Link href="/">
+                    <TextButton >Back</TextButton>
+                </Link>
             </TitleScreenContainer>
         </Col>
     )
