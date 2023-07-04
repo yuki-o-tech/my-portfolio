@@ -1,6 +1,18 @@
 import styled from "styled-components"
-import Box from "@/common/Box"
+import Box, { WideCol } from "@/common/Box"
 
+export const SectionContainer = styled(WideCol)`
+text-align: center;
+
+`
+
+export const SwiperBox = styled(Box)`
+text-align: -webkit-center;
+padding:50px 180px;
+`
+
+
+//TODO delete
 export const Container = styled(Box)`
   display: grid;
   grid-template-columns: repeat(2, 520px);

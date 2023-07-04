@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Button from "@mui/material/Button"
-import Box from "@/common/Box";
+import Box from "@/common/Box"
 import Text from "@/common/Text"
 import { Colors } from "@/utils/Colors"
 
