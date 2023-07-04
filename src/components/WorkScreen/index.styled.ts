@@ -10,6 +10,12 @@ padding-bottom:100px;
 export const SwiperBox = styled(Box)`
 text-align: -webkit-center;
 padding:50px 180px;
+@media (max-width: 1280px) {
+  padding:50px ;
+}
+@media (max-width: 430px) {
+  padding:50px 30px;
+}
 `
 
 
