@@ -5,7 +5,7 @@ import TitleScreenContainer from "@/common/TitleScreenContainer"
 import Box, { Col } from "@/common/Box"
 import { TextButton } from "@/common/Button"
 import Text from "@/common/Text"
-import { uiuxworksData, leafletsWorksData } from "@/components/WorksPage/worksPageData"
+import { uiuxworksData, flyersWorksData } from "@/components/WorksPage/worksPageData"
 import { FigmaButton, ImageContainer, BaseText } from "@/components/WorksPage/index.styled"
 import { Colors } from "@/utils/Colors"
 
@@ -74,7 +74,7 @@ const WorksPageLayout = () => {
 
             </TitleScreenContainer>
             <TitleScreenContainer title="Other design" >
-                {leafletsWorksData.map((work, index) => (
+                {flyersWorksData.map((work, index) => (
                     <Col key={index} centerAlign>
                         <ImageContainer>
                             <Image src={`/${work.image}`} alt="work image" layout="responsive" width={1040} height={520} />
@@ -83,7 +83,7 @@ const WorksPageLayout = () => {
                     </Col>
                 ))}
                 <Link href="/">
-                    <TextButton >Back</TextButton>
+                    <TextButton variant="outlined" >Back</TextButton>
                 </Link>
             </TitleScreenContainer>
         </Col>
