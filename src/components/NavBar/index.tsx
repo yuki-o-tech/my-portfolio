@@ -9,10 +9,12 @@ import {
   NavBarRight,
   IconBox,
 } from "@/components/NavBar/index.styled"
-import LinkedInIcon from "@/icons/LinkedInIcon"
-import { Colors } from "@/utils/Colors"
 import LogoIcon from "@/icons/Logo"
+import GithubIcon from "@/icons/GithubIcon"
+import LinkedInIcon from "@/icons/LinkedInIcon"
 import InstagramIcon from "@/icons/InstagramIcon"
+import { Colors } from "@/utils/Colors"
+
 
 interface NavBarProps {
   hideItemBox?: boolean;
@@ -57,6 +59,11 @@ const NavBar = ({ hideItemBox }: NavBarProps) => {
       <NavBarRight>
         {hideItemBox ? null : <ItemBox />}
         <Box gap={20}>
+          <IconBox w={25} h={25}>
+            <Link href="https://github.com/yuki-o-tech" target="_blank">
+              <GithubIcon />
+            </Link>
+          </IconBox>
           <IconBox w={25} h={25}>
             <Link
               href="https://www.linkedin.com/in/yuki-otsubo-74987b214/"

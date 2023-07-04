@@ -14,10 +14,12 @@ import {
   Textarea,
   Button,
 } from "@/components/FooterScreen/index.style"
+import GithubIcon from "@/icons/GithubIcon"
 import LinkedInIcon from "@/icons/LinkedInIcon"
 import InstagramIcon from "@/icons/InstagramIcon"
 import { Colors } from "@/utils/Colors"
 import { validateContactForm } from "schemas/contactFormSchema"
+
 
 const initialValues: FieldValuesType = {
   fullName: "",
@@ -149,6 +151,11 @@ const LeftContainer = () => {
         お問合せはフォームよりお願いいたします。
       </Text>
       <Box gap={16}>
+        <IconBox w={25} h={25}>
+          <Link href="https://github.com/yuki-o-tech" target="_blank">
+            <GithubIcon />
+          </Link>
+        </IconBox>
         <IconBox w={25} h={25}>
           <Link
             href="https://www.linkedin.com/in/yuki-otsubo-74987b214/"
