@@ -21,7 +21,7 @@ interface NavBarProps {
 }
 
 const items = [
-  { name: "Work", to: "work" },
+  { name: "My Works", to: "work" },
   { name: "About", to: "about" },
   { name: "Contact", to: "contact" },
 ]

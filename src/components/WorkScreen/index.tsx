@@ -20,7 +20,7 @@ const WorkScreen = () => {
   return (
     <SectionContainer>
       <Text fs={32} fw={600} lh={32}>
-        Work
+        My Works
       </Text>
       <SwiperBox className="swiperBox" >
         <Swiper
