@@ -20,7 +20,6 @@ import InstagramIcon from "@/icons/InstagramIcon"
 import { Colors } from "@/utils/Colors"
 import { validateContactForm } from "schemas/contactFormSchema"
 
-
 const initialValues: FieldValuesType = {
   fullName: "",
   email: "",
@@ -57,6 +56,14 @@ const ContactForm = () => {
       })
 
       console.log("response", response)
+
+      const test =
+        formik.values.fullName.length === 0 ||
+        formik.values.email.length === 0 ||
+        formik.values.message.length === 0 ||
+        Object.keys(formik.errors).length > 0
+
+      console.log("check the submit value", test)
       if (response.ok) {
         toast.success(
           <div>
@@ -126,12 +133,14 @@ const ContactForm = () => {
         </Col>
         <Button
           type="submit"
-          disabled={
-            !formik.values.fullName ||
-            !formik.values.email ||
-            !formik.values.message ||
-            Object.keys(formik.errors).length > 0
-          }>
+          // disabled={
+          //   formik.values.fullName.length === 0 ||
+          //   formik.values.email.length === 0 ||
+          //   formik.values.message.length === 0 ||
+          //   Object.keys(formik.errors).length > 0
+          // }
+          disabled
+        >
           Submit
         </Button>
       </Form>
@@ -159,7 +168,8 @@ const LeftContainer = () => {
         <IconBox w={25} h={25}>
           <Link
             href="https://www.linkedin.com/in/yuki-otsubo-74987b214/"
-            target="_blank">
+            target="_blank"
+          >
             <LinkedInIcon />
           </Link>
         </IconBox>

@@ -14,13 +14,13 @@ export const Container = styled(Box)`
 `
 
 export const ItemContainer = styled(Box)`
-:hover {
-  transform: translateY(-8px);
-  transition: all 0.2s ease 0s;
+  &:hover {
+    transform: translateY(-8px);
+    transition: all 0.2s ease 0s;
 
-  & * {
-    transform: none !important;
-    transition: none !important;
+    & * {
+      transform: none !important;
+      transition: none !important;
+    }
   }
-}
 `

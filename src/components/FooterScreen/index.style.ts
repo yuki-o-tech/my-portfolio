@@ -98,16 +98,16 @@ export const Button = styled.button`
   padding: 25px 80px;
   border-radius: 5px;
   cursor: pointer;
-  :hover {
+  &:hover {
     background: ${Colors.ORANGE};
     color: ${Colors.WHITE};
     transition: transform 0.3s ease-in-out;
   }
-  :disabled {
-    background: ${Colors.GRAY_900};
+  &:disabled {
+    background-color: ${Colors.GRAY_900};
     cursor: not-allowed;
   }
-  :active {
+  &:active {
     transition: transform 0.3s ease-in-out;
   }
   @media (max-width: 928px) {

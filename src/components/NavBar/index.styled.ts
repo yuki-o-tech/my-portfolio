@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Box from "@/common/Box"
+import Text from "@/common/Text"
 import { Colors } from "@/utils/Colors"
 
 export const Container = styled(Box)`
@@ -18,13 +19,19 @@ export const Container = styled(Box)`
 
 export const ItemContainer = styled(Box)`
   line-height: 30px;
-  :hover {
+  &:hover {
     border-bottom: 2px solid ${Colors.BLACK};
     transition: border-bottom 0.2s;
     cursor: pointer;
   }
   @media (max-width: 430px) {
     display: none;
+  }
+`
+
+export const ItemText = styled(Text)`
+  &:hover {
+    border-bottom: unset;
   }
 `
 
