@@ -2,22 +2,20 @@ import styled from "styled-components"
 import Box, { WideCol } from "@/common/Box"
 
 export const SectionContainer = styled(WideCol)`
-text-align: center;
-padding-bottom:100px;
-
+  text-align: center;
+  padding-bottom: 100px;
 `
 
 export const SwiperBox = styled(Box)`
-text-align: -webkit-center;
-padding:50px 180px;
-@media (max-width: 1280px) {
-  padding:50px ;
-}
-@media (max-width: 430px) {
-  padding:50px 30px;
-}
+  text-align: -webkit-center;
+  padding: 50px 180px;
+  @media (max-width: 1280px) {
+    padding: 50px;
+  }
+  @media (max-width: 430px) {
+    padding: 50px 30px;
+  }
 `
-
 
 //TODO delete
 export const Container = styled(Box)`
@@ -36,13 +34,13 @@ export const Container = styled(Box)`
   }
 `
 export const ItemContainer = styled(Box)`
-:hover {
-  transform: translateY(-8px);
-  transition: all 0.2s ease 0s;
+  &:hover {
+    transform: translateY(-8px);
+    transition: all 0.2s ease 0s;
 
-  & * {
-    transform: none !important;
-    transition: none !important;
+    & * {
+      transform: none !important;
+      transition: none !important;
+    }
   }
-}
 `
