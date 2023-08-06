@@ -2,16 +2,16 @@ interface CardProps {
   link: string
   src: string
   title: string
-  label?:string
+  label?: string
   description: string | React.ReactNode
 }
 
 export const clientData: Array<CardProps> = [
   {
-    link: "https://www.tacen.com/",
+    link: "https://alpha.tacen.exchange/",
     src: "/tacenExchange.jpg",
     title: "Tacen Exchange",
-    label:'Kawazu sakura',
+    label: "Kawazu sakura",
     description: (
       <>
         <span>
@@ -32,7 +32,7 @@ export const clientData: Array<CardProps> = [
     link: "https://stake.txa.app/",
     src: "/stakingWebsite.jpg",
     title: "Tacen Project TXA",
-    label:'Kawazu sakura',
+    label: "Kawazu sakura",
     description: (
       <>
         <span>
@@ -49,7 +49,7 @@ export const clientData: Array<CardProps> = [
     link: "https://asharq.com/",
     src: "/asharqNews.jpg",
     title: "Asharq News",
-    label:'Kawazu sakura',
+    label: "Kawazu sakura",
     description: (
       <>
         <span>
@@ -66,7 +66,7 @@ export const clientData: Array<CardProps> = [
     link: "https://radiko.jp/",
     src: "/radiko.jpg",
     title: "Radiko",
-    label:'Kawazu sakura',
+    label: "Kawazu sakura",
     description: (
       <>
         <span>
