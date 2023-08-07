@@ -5,7 +5,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (!process.env.MAIL_USER || !process.env.MAIL_PASS) {
+  if (
+    !process.env.NEXT_PUBLIC_MAIL_USER ||
+    !process.env.NEXT_PUBLIC_MAIL_PASS
+  ) {
     res
       .status(500)
       .json({ error: "The server is not properly configured to send emails." })
@@ -17,16 +20,16 @@ export default async function handler(
     port: 587,
     secure: false,
     auth: {
-      user: process.env.MAIL_USER,
-      pass: process.env.MAIL_PASS,
+      user: process.env.NEXT_PUBLIC_MAIL_USER,
+      pass: process.env.NEXT_PUBLIC_MAIL_PASS,
     },
   })
 
   const { email, fullName, message } = req.body
 
   let mailOptions = {
-    from: `"Yuki Otsubo" <${process.env.MAIL_USER}>`,
-    to: process.env.MAIL_USER,
+    from: `"Yuki Otsubo" <${process.env.NEXT_PUBLIC_MAIL_USER}>`,
+    to: process.env.NEXT_PUBLIC_MAIL_USER,
     subject: `[Portfolio website] New message contact form`,
     text: `
       From: ${fullName} <${email}>
