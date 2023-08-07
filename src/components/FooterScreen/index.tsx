@@ -54,16 +54,7 @@ const ContactForm = () => {
         },
         body: JSON.stringify(values),
       })
-
       console.log("response", response)
-
-      const test =
-        formik.values.fullName.length === 0 ||
-        formik.values.email.length === 0 ||
-        formik.values.message.length === 0 ||
-        Object.keys(formik.errors).length > 0
-
-      console.log("check the submit value", test)
       if (response.ok) {
         toast.success(
           <div>
@@ -76,16 +67,18 @@ const ContactForm = () => {
           }
         )
       } else {
-        toast.error(
-          <div>
-            Message send failed.
-            <br />
-            Please try again.
-          </div>,
-          {
-            duration: 20000,
-          }
-        )
+        response.json().then(data => {
+          toast.error(
+            <div>
+              Message send failed.
+              <br />
+              Please try again.
+            </div>,
+            {
+              duration: 20000,
+            }
+          )
+        })
       }
       actions.resetForm()
     },
@@ -133,13 +126,12 @@ const ContactForm = () => {
         </Col>
         <Button
           type="submit"
-          // disabled={
-          //   formik.values.fullName.length === 0 ||
-          //   formik.values.email.length === 0 ||
-          //   formik.values.message.length === 0 ||
-          //   Object.keys(formik.errors).length > 0
-          // }
-          disabled
+          disabled={
+            formik.values.fullName.length === 0 ||
+            formik.values.email.length === 0 ||
+            formik.values.message.length === 0 ||
+            Object.keys(formik.errors).length > 0
+          }
         >
           Submit
         </Button>
