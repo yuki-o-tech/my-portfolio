@@ -1,8 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import { Link as Scroll } from "react-scroll"
 import Box from "@/common/Box"
-import Text from "@/common/Text"
 import {
   Container,
   ItemContainer,
@@ -51,8 +50,25 @@ const ItemBox = () => {
 }
 
 const NavBar = ({ hideItemBox }: NavBarProps) => {
+  const [scrolled, setScrolled] = useState(false)
+  const handleScroll = () => {
+    const offset = window.scrollY
+    if (offset > 720) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <Container h={80} bgc={Colors.WHITE}>
+    <Container h={80} scrolled={scrolled}>
       <Link href="/">
         <LogoIcon />
       </Link>

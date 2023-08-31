@@ -6,17 +6,23 @@ import EyeIcon from "@/icons/EyeIcon"
 export const cardData: Array<CardProps> = [
   {
     icon: CodeIcon,
-    title: "コーディング",
+    title: (
+      <>
+        <span>モダンな</span>
+        <br />
+        <span>コーディング</span>
+      </>
+    ),
     description:
-      "フロントエンドの経験からHTML、CSS、JavaScript、最新のフレームワークを駆使して、クリーンで効率的、かつ再利用可能なコードを書き、デザインを機能的に変換します。",
+      "React, TypeScriptを駆使して、クリーンで効率的、かつ再利用可能なコードを書き、デザインを機能的に変換します。",
   },
   {
     icon: EyeIcon,
     title: (
       <>
-        <span>コーディングと</span>
+        <span>UIコンポーネント</span>
         <br />
-        <span>デザイン</span>
+        <span>とデザイン</span>
       </>
     ),
     description:
@@ -32,6 +38,6 @@ export const cardData: Array<CardProps> = [
       </>
     ),
     description:
-      "前職のキュレーターの経験を活かし、ゲストの体験を常に意識しながら、展覧会を企画してきました。私はUXデザイナーとして、この原則を応用し、ユーザーがどのように製品に接し、どのようにナビゲートするかを想定できるでしょう。",
+      "前職のキュレーターの経験を活かし、ユーザーがどのように製品に接し、ナビゲートするかを想定できるでしょう。",
   },
 ]

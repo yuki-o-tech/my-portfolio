@@ -3,17 +3,25 @@ import Box from "@/common/Box"
 import Text from "@/common/Text"
 import { Colors } from "@/utils/Colors"
 
-export const Container = styled(Box)`
+interface ContainerProps {
+  scrolled: boolean
+}
+
+export const Container = styled(Box)<ContainerProps>`
   position: fixed;
   width: 100%;
   justify-content: space-between;
   padding: 24px 100px;
   z-index: 9998;
+  backdrop-filter: ${({ scrolled }) => (scrolled ? "none" : "blur(25px)")};
+  background: ${({ scrolled }) => (scrolled ? Colors.WHITE : "transparent")};
   @media (max-width: 928px) {
     padding: 24px 50px;
   }
   @media (max-width: 430px) {
     padding: 24px 30px;
+    backdrop-filter: none;
+    background: ${Colors.WHITE};
   }
 `
 
