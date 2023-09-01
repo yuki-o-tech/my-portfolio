@@ -125,7 +125,6 @@ const ContactForm = () => {
           )}
         </Col>
         <Button
-          type="submit"
           disabled={
             formik.values.fullName.length === 0 ||
             formik.values.email.length === 0 ||

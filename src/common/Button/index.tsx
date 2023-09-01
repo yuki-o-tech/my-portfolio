@@ -4,12 +4,13 @@ import { Colors } from "@/utils/Colors"
 
 export const TextButton = styled(Button)`
   align-self: center;
-  width: 100px;
+  width: 150px;
+  height: 40px;
   border: 1px solid ${Colors.BLACK};
   color: ${Colors.BLACK};
-  & > .MuiButton-root {
-    &:hover {
-      background-color: red !important;
-    }
+
+  &:hover {
+    border: 1px solid ${Colors.GREEN};
+    background-color: rgb(0 181 168 / 10%);
   }
 `

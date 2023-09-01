@@ -1,5 +1,7 @@
 import styled from "styled-components"
+import { Swiper } from "swiper/react"
 import Box, { WideCol } from "@/common/Box"
+import { Colors } from "@/utils/Colors"
 
 export const SectionContainer = styled(WideCol)`
   text-align: center;
@@ -14,6 +16,13 @@ export const SwiperBox = styled(Box)`
   }
   @media (max-width: 430px) {
     padding: 50px 30px;
+  }
+`
+
+export const SwiperDetail = styled(Swiper)`
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: ${Colors.BLACK};
   }
 `
 

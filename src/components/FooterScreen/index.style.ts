@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components"
 import Box, { Col } from "@/common/Box"
+import { TextButton } from "@/common/Button"
 import { Colors } from "@/utils/Colors"
 
 export const Container = styled(Col)`
@@ -83,41 +84,34 @@ export const Textarea = styled.textarea`
   height: 200px;
 `
 
-export const Button = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 235px;
-  height: 80px;
+export const Button = styled(TextButton)`
   background: ${Colors.GREEN};
   color: ${Colors.WHITE};
   font-family: Epilogue, sans-serif;
   font-weight: 600;
   font-size: 20px;
-  line-height: 30px;
   padding: 25px 80px;
-  border-radius: 5px;
-  cursor: pointer;
+  align-self: start;
+  border: unset;
+  text-transform: capitalize;
   &:hover {
     background: ${Colors.ORANGE};
     color: ${Colors.WHITE};
+    border: unset;
     transition: transform 0.3s ease-in-out;
   }
   &:disabled {
     background-color: ${Colors.GRAY_900};
     cursor: not-allowed;
+    color: ${Colors.WHITE};
   }
   &:active {
     transition: transform 0.3s ease-in-out;
   }
   @media (max-width: 928px) {
-    width: 200px;
-    height: 60px;
     font-size: 18px;
   }
   @media (max-width: 430px) {
-    width: 180px;
-    height: 50px;
     font-size: 16px;
     padding: unset;
   }

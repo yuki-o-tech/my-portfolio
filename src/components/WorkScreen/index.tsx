@@ -1,19 +1,17 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Swiper, SwiperSlide } from "swiper/react"
+import { SwiperSlide } from "swiper/react"
 import SwiperCore, { Pagination, Navigation } from "swiper"
 import "swiper/css/bundle"
 import Box from "@/common/Box"
 import Text from "@/common/Text"
-import TitleScreenContainer from "@/common/TitleScreenContainer"
-import ImageCard from "@/common/ImageCard"
+import { TextButton } from "@/common/Button"
 import {
   SectionContainer,
   SwiperBox,
+  SwiperDetail,
 } from "@/components/WorkScreen/index.styled"
-import { workData } from "@/components/WorkScreen/workData"
-import { TextButton } from "@/common/Button"
 
 SwiperCore.use([Pagination, Navigation])
 
@@ -32,7 +30,7 @@ const WorkScreen = () => {
         My Works
       </Text>
       <SwiperBox className="swiperBox">
-        <Swiper
+        <SwiperDetail
           slidesPerView={1}
           pagination={{
             clickable: true,
@@ -55,10 +53,12 @@ const WorkScreen = () => {
               </SwiperSlide>
             )
           })}
-        </Swiper>
+        </SwiperDetail>
       </SwiperBox>
       <Link href="/works">
-        <TextButton variant="outlined">More {">"}</TextButton>
+        <TextButton className="MuiButton" variant="outlined">
+          More
+        </TextButton>
       </Link>
     </SectionContainer>
   )
