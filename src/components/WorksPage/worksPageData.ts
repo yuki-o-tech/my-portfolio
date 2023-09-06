@@ -28,7 +28,7 @@ export const uiuxworksData = [
     制作期間: "約2週間",
     制作コメント:
       "このプロジェクトではユーザビリティとデザインのバランスを重視しました。旅行者やビジネスマンがストレスなく使えるように、シンプルで直感的なインターフェースを目指しました。また、選んだ色はアプリケーションの視覚的な魅力を高め、ユーザーに対して信頼感と安心感を与えることを意図しています。",
-    link: "https://www.figma.com/proto/p7kHdH2mw5AydtOZ9uEX29/Crypto-calculator-App?page-id=0%3A1&type=design&node-id=20-611&viewport=-341%2C248%2C0.81&scaling=scale-down&starting-point-node-id=20%3A611&show-proto-sidebar=1",
+    link: "https://www.figma.com/file/p7kHdH2mw5AydtOZ9uEX29/Crypto-calculator-App?type=design&node-id=20%3A852&mode=design&t=ozxBit6CYf0M6dUO-1",
   },
 ]
 
