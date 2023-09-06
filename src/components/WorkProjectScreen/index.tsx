@@ -2,14 +2,17 @@ import React from "react"
 import Link from "next/link"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
 import ImageCard from "@/common/ImageCard"
-import { Container, ItemContainer } from "@/components/ClientScreen/index.styled"
-import { clientData } from "@/components/ClientScreen/clientData"
+import {
+  Container,
+  ItemContainer,
+} from "@/components/WorkProjectScreen/index.styled"
+import { workProjectData } from "@/components/WorkProjectScreen/workProjectData"
 
-const ClientScreen = () => {
+const WorkProjectScreen = () => {
   return (
-    <TitleScreenContainer title="Clients">
+    <TitleScreenContainer title="Work Projects">
       <Container>
-        {clientData.map((el, index) => {
+        {workProjectData.map((el, index) => {
           return (
             <ItemContainer key={index}>
               <Link href={el.link} target="_blank">
@@ -30,4 +33,4 @@ const ClientScreen = () => {
   )
 }
 
-export default ClientScreen
+export default WorkProjectScreen
