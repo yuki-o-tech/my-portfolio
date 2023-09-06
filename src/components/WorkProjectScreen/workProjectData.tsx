@@ -6,10 +6,31 @@ interface CardProps {
   description: string | React.ReactNode
 }
 
-export const clientData: Array<CardProps> = [
+export const workProjectData: Array<CardProps> = [
+  {
+    link: "https://swap.tacen.exchange/",
+    src: "/tacenSwap.png",
+    title: "Tacen Swap",
+    label: "Kawazu sakura",
+    description: (
+      <>
+        <span>
+          ステーキング機能も備わっているブリッジレスで複数のブロックチェーン間で取引ができるプラットフォーム。
+        </span>
+        <br />
+        <span>
+          フロントエンドとしてプロジェクトの初期フェーズから開発に従事し、フレームワーク、ライブラリ、エラートラッキング、状態管理、そしてデータクエリ等の環境構築を行い、基盤技術をセットアップしました。
+        </span>
+        <br />
+        <span>
+          既存のAPIエンドポイントについても、そのマッピングを明確に文書化し、チームメンバーが効率的にプロジェクトにオンボーディングできるように整備しました。
+        </span>
+      </>
+    ),
+  },
   {
     link: "https://alpha.tacen.exchange/",
-    src: "/tacenExchange.jpg",
+    src: "/exchangeWebApp.png",
     title: "Tacen Exchange",
     label: "Kawazu sakura",
     description: (
@@ -19,7 +40,7 @@ export const clientData: Array<CardProps> = [
         </span>
         <br />
         <span>
-          フロントエンドとして、アルファ版の開発に従事しました。テストの自動化を担当する可能性があり、新しい技術に追いつくためにキャッチアップを行いました。
+          フロントエンドとしてアルファ版の開発に従事しました。テストの自動化を担当する可能性があり、新しい技術に追いつくためにキャッチアップを行いました。
         </span>
         <br />
         <span>
@@ -29,14 +50,15 @@ export const clientData: Array<CardProps> = [
     ),
   },
   {
-    link: "https://stake.txa.app/",
-    src: "/stakingWebsite.jpg",
+    link: "https://www.txa.app/",
+    src: "/projectTXAWebsite.png",
     title: "Tacen Project TXA",
     label: "Kawazu sakura",
     description: (
       <>
         <span>
-          Tacenが発行するトークンをステークするウェブサイトの開発に従事しました。
+          Tacenが発行するトークンをステークするウェブサイトの開発に従事しました。(※現在はTacen
+          Project TXAに関する情報のみ。)
         </span>
         <br />
         <span>
@@ -47,7 +69,7 @@ export const clientData: Array<CardProps> = [
   },
   {
     link: "https://asharq.com/",
-    src: "/asharqNews.jpg",
+    src: "/asharqNews.png",
     title: "Asharq News",
     label: "Kawazu sakura",
     description: (
@@ -64,7 +86,7 @@ export const clientData: Array<CardProps> = [
   },
   {
     link: "https://radiko.jp/",
-    src: "/radiko.jpg",
+    src: "/radiko.png",
     title: "Radiko",
     label: "Kawazu sakura",
     description: (

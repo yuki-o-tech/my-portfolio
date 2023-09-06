@@ -83,6 +83,13 @@ const ContactForm = () => {
       actions.resetForm()
     },
   })
+  console.log(
+    "disabled",
+    formik.values.fullName.length === 0 ||
+      formik.values.email.length === 0 ||
+      formik.values.message.length === 0 ||
+      Object.keys(formik.errors).length > 0
+  )
   return (
     <Col>
       <Form onSubmit={formik.handleSubmit}>

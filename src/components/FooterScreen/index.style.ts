@@ -51,7 +51,7 @@ const commonFieldStyle = css`
     padding: 16px;
   }
   :focus {
-    outline: solid 2px ${Colors.GREEN};
+    outline: solid 2px ${Colors.GREEN_900};
   }
   &input:-webkit-autofill,
   input:-webkit-autofill:hover,
@@ -85,7 +85,7 @@ export const Textarea = styled.textarea`
 `
 
 export const Button = styled(TextButton)`
-  background: ${Colors.GREEN};
+  background: ${Colors.GREEN_900};
   color: ${Colors.WHITE};
   font-family: Epilogue, sans-serif;
   font-weight: 600;
@@ -101,9 +101,12 @@ export const Button = styled(TextButton)`
     transition: transform 0.3s ease-in-out;
   }
   &:disabled {
-    background-color: ${Colors.GRAY_900};
-    cursor: not-allowed;
+    background: ${Colors.GRAY_900};
     color: ${Colors.WHITE};
+  }
+  .MuiButtonBase-root&:disabled {
+    cursor: not-allowed;
+    pointer-events: auto;
   }
   &:active {
     transition: transform 0.3s ease-in-out;

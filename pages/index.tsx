@@ -5,7 +5,7 @@ import TopComponent from "@/components/TopScreen"
 import SkillScreen from "@/components/SkillScreen"
 import ToolsScreen from "src/components/ToolsScreen"
 import WorkScreen from "@/components/WorkScreen"
-import ClientScreen from "@/components/ClientScreen"
+import WorkProjectScreen from "src/components/WorkProjectScreen"
 import AboutScreen from "@/components/AboutScreen"
 import ExperienceScreen from "@/components/ExperienceScreen"
 import FooterScreen from "@/components/FooterScreen"
@@ -27,7 +27,7 @@ const Page = () => {
       <div id="work">
         <WorkScreen />
       </div>
-      <ClientScreen />
+      <WorkProjectScreen />
       <div id="about">
         <AboutScreen />
       </div>

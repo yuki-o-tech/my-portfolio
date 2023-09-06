@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components"
 import { WideCol } from "@/common/Box"
 import Text from "@/common/Text"
+import { Colors } from "@/utils/Colors"
 
 const slideUp = keyframes`
   from {
@@ -51,8 +52,15 @@ export const Background = styled(WideCol)`
   right: 0;
   bottom: 0;
   z-index: -1;
-
-  background: linear-gradient(135deg, white, #f7d1df, #a3cbda, #96d5c6, white);
+  height: calc(100vh - 80px);
+  background: linear-gradient(
+    135deg,
+    ${Colors.WHITE},
+    ${Colors.PINK_300},
+    ${Colors.BLUE_300},
+    ${Colors.GREEN_300},
+    ${Colors.WHITE}
+  );
   background-size: 200% 100%;
   animation: ${Gradient} 15s ease infinite;
 

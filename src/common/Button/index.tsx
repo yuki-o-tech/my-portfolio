@@ -10,7 +10,7 @@ export const TextButton = styled(Button)`
   color: ${Colors.BLACK};
 
   &:hover {
-    border: 1px solid ${Colors.GREEN};
+    border: 1px solid ${Colors.GREEN_900};
     background-color: rgb(0 181 168 / 10%);
   }
 `
