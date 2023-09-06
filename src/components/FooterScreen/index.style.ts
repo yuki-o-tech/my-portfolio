@@ -85,7 +85,7 @@ export const Textarea = styled.textarea`
 `
 
 export const Button = styled(TextButton)`
-  background: ${Colors.GREEN_900};
+  background-color: ${Colors.GREEN_900};
   color: ${Colors.WHITE};
   font-family: Epilogue, sans-serif;
   font-weight: 600;
@@ -95,16 +95,14 @@ export const Button = styled(TextButton)`
   border: unset;
   text-transform: capitalize;
   &:hover {
-    background: ${Colors.ORANGE};
+    background-color: ${Colors.ORANGE};
     color: ${Colors.WHITE};
     border: unset;
     transition: transform 0.3s ease-in-out;
   }
-  &:disabled {
-    background: ${Colors.GRAY_900};
-    color: ${Colors.WHITE};
-  }
   .MuiButtonBase-root&:disabled {
+    background-color: ${Colors.GRAY_900};
+    color: ${Colors.WHITE};
     cursor: not-allowed;
     pointer-events: auto;
   }
