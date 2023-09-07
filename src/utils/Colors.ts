@@ -3,6 +3,7 @@ export const Colors = {
   BLACK: "#2D2D2D",
   BLUE_300: "#a3cbda",
   GRAY_100: "#F3F3F3",
+  GRAY_300: "#A5A5A5",
   GRAY_900: "#111827",
   GREEN_300: "#a3cbda",
   GREEN_900: "#00B5A8",

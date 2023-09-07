@@ -2,19 +2,21 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import TitleScreenContainer from "@/common/TitleScreenContainer"
-import Box, { Col } from "@/common/Box"
+import { Center, Col, WideBox, WideCol } from "@/common/Box"
 import { TextButton } from "@/common/Button"
 import Text from "@/common/Text"
 import {
-  uiuxworksData,
+  myWorksData,
   flyersWorksData,
 } from "@/components/WorksPage/worksPageData"
 import {
-  FigmaButton,
+  LinkButton,
   ImageContainer,
   BaseText,
 } from "@/components/WorksPage/index.styled"
 import { Colors } from "@/utils/Colors"
+import GithubIcon from "@/icons/GithubIcon"
+import DarkFigmaIcon from "@/icons/Logos/DarkFigmaIcon"
 
 interface TextProps {
   leftText: string
@@ -22,8 +24,9 @@ interface TextProps {
 }
 
 type WorkData = {
-  image: string
+  image?: string
   link?: string
+  githubLink?: string
   [key: string]: string | undefined
 }
 
@@ -39,53 +42,73 @@ const TextBox = ({ leftText, rightText }: TextProps) => {
     fw: 400,
   }
   return (
-    <Box maxW={1040}>
-      <Text {...textProps} w={150}>
+    <WideBox maxW={1040}>
+      <Text {...textProps} w={200}>
         ■{leftText}:
       </Text>
       <BaseText {...textProps}>{rightText}</BaseText>
-    </Box>
+    </WideBox>
   )
 }
 
 const WorksBox = ({ workData }: WorksBoxProps) => {
   return (
-    <>
+    <WideCol>
       <Col pt={80} pb={20}>
         {Object.entries(workData).map(([key, value], index) => {
-          if (key !== "image" && key !== "link") {
+          if (key !== "image" && key !== "link" && key !== "githubLink") {
             return (
               <TextBox key={index} leftText={key} rightText={value as string} />
             )
           }
         })}
       </Col>
-      {workData.link ? (
-        <FigmaButton
-          onClick={() => window.open(workData.link, "_blank")}
-          variant="outlined"
-        >
-          Go to Figma
-        </FigmaButton>
-      ) : null}
-    </>
+      <Center gap={20}>
+        {workData.githubLink ? (
+          <LinkButton
+            onClick={() => window.open(workData.githubLink, "_blank")}
+            variant="outlined"
+            startIcon={<GithubIcon />}
+          >
+            Go to Github
+          </LinkButton>
+        ) : null}
+        {workData.link ? (
+          <LinkButton
+            onClick={() => window.open(workData.link, "_blank")}
+            variant="outlined"
+            startIcon={<DarkFigmaIcon />}
+          >
+            Go to Figma
+          </LinkButton>
+        ) : null}
+      </Center>
+    </WideCol>
   )
 }
 
 const WorksPageLayout = () => {
   return (
     <Col>
-      <TitleScreenContainer title="UI/UX design" hasTop>
-        {uiuxworksData.map((work, index) => (
-          <Col key={index} centerAlign>
+      <TitleScreenContainer title="Personal Development & UI/UX design" hasTop>
+        {myWorksData.map((work, index) => (
+          <Col key={index} centerAlign pb={30}>
             <ImageContainer>
-              <Image
-                src={`/${work.image}`}
-                alt="work image"
-                layout="responsive"
-                width={1040}
-                height={520}
-              />
+              {work.image ? (
+                <Image
+                  src={`/${work.image}`}
+                  alt="work image"
+                  layout="responsive"
+                  width={1040}
+                  height={520}
+                />
+              ) : (
+                <Center w={1040} h={520} bgc={Colors.GRAY_300}>
+                  <Text fs={30} color={Colors.WHITE}>
+                    No image
+                  </Text>
+                </Center>
+              )}
             </ImageContainer>
             <WorksBox workData={work} />
           </Col>
