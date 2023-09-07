@@ -13,10 +13,11 @@ import {
   LinkButton,
   ImageContainer,
   BaseText,
+  AspectRatioBox,
 } from "@/components/WorksPage/index.styled"
-import { Colors } from "@/utils/Colors"
 import GithubIcon from "@/icons/GithubIcon"
 import DarkFigmaIcon from "@/icons/Logos/DarkFigmaIcon"
+import { Colors } from "@/utils/Colors"
 
 interface TextProps {
   leftText: string
@@ -42,7 +43,7 @@ const TextBox = ({ leftText, rightText }: TextProps) => {
     fw: 400,
   }
   return (
-    <WideBox maxW={1040}>
+    <WideBox>
       <Text {...textProps} w={200}>
         ■{leftText}:
       </Text>
@@ -51,37 +52,37 @@ const TextBox = ({ leftText, rightText }: TextProps) => {
   )
 }
 
-const WorksBox = ({ workData }: WorksBoxProps) => {
+const renderLinkButton = (
+  icon: React.ReactNode,
+  buttonText: string,
+  link?: string
+) => {
+  if (!link) return null
   return (
-    <WideCol>
+    <LinkButton
+      onClick={() => window.open(link, "_blank")}
+      variant="outlined"
+      startIcon={icon}
+    >
+      {buttonText}
+    </LinkButton>
+  )
+}
+
+const WorksBox = ({ workData }: WorksBoxProps) => {
+  const filteredDataEntries = Object.entries(workData).filter(
+    ([key]) => !["image", "link", "githubLink"].includes(key)
+  )
+  return (
+    <WideCol maxW={1040}>
       <Col pt={80} pb={20}>
-        {Object.entries(workData).map(([key, value], index) => {
-          if (key !== "image" && key !== "link" && key !== "githubLink") {
-            return (
-              <TextBox key={index} leftText={key} rightText={value as string} />
-            )
-          }
-        })}
+        {filteredDataEntries.map(([key, value], index) => (
+          <TextBox key={index} leftText={key} rightText={value as string} />
+        ))}
       </Col>
       <Center gap={20}>
-        {workData.githubLink ? (
-          <LinkButton
-            onClick={() => window.open(workData.githubLink, "_blank")}
-            variant="outlined"
-            startIcon={<GithubIcon />}
-          >
-            Go to Github
-          </LinkButton>
-        ) : null}
-        {workData.link ? (
-          <LinkButton
-            onClick={() => window.open(workData.link, "_blank")}
-            variant="outlined"
-            startIcon={<DarkFigmaIcon />}
-          >
-            Go to Figma
-          </LinkButton>
-        ) : null}
+        {renderLinkButton(<GithubIcon />, "Go to Github", workData.githubLink)}
+        {renderLinkButton(<DarkFigmaIcon />, "Go to Figma", workData.link)}
       </Center>
     </WideCol>
   )
@@ -92,7 +93,7 @@ const WorksPageLayout = () => {
     <Col>
       <TitleScreenContainer title="Personal Development & UI/UX design" hasTop>
         {myWorksData.map((work, index) => (
-          <Col key={index} centerAlign pb={30}>
+          <WideCol key={index} centerAlign pb={30}>
             <ImageContainer>
               {work.image ? (
                 <Image
@@ -103,15 +104,15 @@ const WorksPageLayout = () => {
                   height={520}
                 />
               ) : (
-                <Center w={1040} h={520} bgc={Colors.GRAY_300}>
+                <AspectRatioBox bgc={Colors.GRAY_300}>
                   <Text fs={30} color={Colors.WHITE}>
                     No image
                   </Text>
-                </Center>
+                </AspectRatioBox>
               )}
             </ImageContainer>
             <WorksBox workData={work} />
-          </Col>
+          </WideCol>
         ))}
       </TitleScreenContainer>
       <TitleScreenContainer title="Other design">
