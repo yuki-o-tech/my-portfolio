@@ -1,4 +1,4 @@
-export const uiuxworksData = [
+export const myWorksData = [
   {
     image: "portfolio.jpg",
     製品名: "Portfolio website",
@@ -11,6 +11,9 @@ export const uiuxworksData = [
     制作期間: "約3週間",
     制作コメント:
       "自分の名前のオリジナルロゴを作成し、自分が何者であるかというのがわかりやすく伝えられるよう心がけました。",
+    開発言語等: "React, Next.js, TypeScript,",
+    その他開発環境: "Git, MUI, Figma",
+    githubLink: "https://github.com/yuki-o-tech/my-portfolio",
     link: "https://www.figma.com/file/X0Hz4pFlbFyantAliSnaGB/Portfolio?type=design&node-id=1%3A1166&mode=design&t=qnsgX2ekiSLk09Da-1",
   },
   {
@@ -29,6 +32,12 @@ export const uiuxworksData = [
     制作コメント:
       "このプロジェクトではユーザビリティとデザインのバランスを重視しました。旅行者やビジネスマンがストレスなく使えるように、シンプルで直感的なインターフェースを目指しました。また、選んだ色はアプリケーションの視覚的な魅力を高め、ユーザーに対して信頼感と安心感を与えることを意図しています。",
     link: "https://www.figma.com/file/p7kHdH2mw5AydtOZ9uEX29/Crypto-calculator-App?type=design&node-id=20%3A852&mode=design&t=ozxBit6CYf0M6dUO-1",
+  },
+  {
+    製品名: "[開発中] Pokedex App",
+    言語等: "React, Next.js, TypeScript,",
+    その他開発環境: "Git, Recoil, MUI, Figma",
+    githubLink: "https://github.com/yuki-o-tech/pokedex",
   },
 ]
 
