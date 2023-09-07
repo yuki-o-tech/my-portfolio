@@ -3,13 +3,19 @@ import Button from "@mui/material/Button"
 import { Colors } from "@/utils/Colors"
 
 export const TextButton = styled(Button)`
-  align-self: center;
-  width: 150px;
-  height: 40px;
-  border: 1px solid ${Colors.BLACK};
-  color: ${Colors.BLACK};
+  &.MuiButtonBase-root {
+    align-self: center;
+    width: 150px;
+    height: 40px;
+    border: 1px solid ${Colors.BLACK};
+    color: ${Colors.BLACK};
 
-  &:hover {
+    &:hover {
+      border: 1px solid ${Colors.GREEN_900};
+      background-color: rgb(0 181 168 / 10%);
+    }
+  }
+  &.MuiButtonBase-root &:hover {
     border: 1px solid ${Colors.GREEN_900};
     background-color: rgb(0 181 168 / 10%);
   }
