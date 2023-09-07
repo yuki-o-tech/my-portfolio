@@ -105,6 +105,7 @@ export const Button = styled(TextButton)`
   &.MuiButtonBase-root&:disabled {
     background-color: ${Colors.GRAY_900};
     color: ${Colors.WHITE};
+    border: 1px solid ${Colors.GRAY_900};
     cursor: not-allowed;
     pointer-events: auto;
   }
