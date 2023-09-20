@@ -29,7 +29,7 @@ export const workProjectData: Array<CardProps> = [
     ),
   },
   {
-    link: "https://alpha.tacen.exchange/",
+    link: "https://tacen.exchange/",
     src: "/exchangeWebApp.png",
     title: "Tacen Exchange",
     label: "Kawazu sakura",
